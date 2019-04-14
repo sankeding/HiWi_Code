@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o"
   "CMakeFiles/plane_extract.dir/src/findFiles.cpp.o"
   "CMakeFiles/plane_extract.dir/src/main.cpp.o"
   "CMakeFiles/plane_extract.dir/src/showHelp.cpp.o"

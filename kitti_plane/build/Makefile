@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rick/文档/PCL/kitti_plane
+CMAKE_SOURCE_DIR = /home/rick/HiWi/GitCode/kitti_plane
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rick/文档/PCL/kitti_plane/build
+CMAKE_BINARY_DIR = /home/rick/HiWi/GitCode/kitti_plane/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rick/文档/PCL/kitti_plane/build/CMakeFiles /home/rick/文档/PCL/kitti_plane/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles /home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rick/文档/PCL/kitti_plane/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ plane_extract: cmake_check_build_system
 plane_extract/fast:
 	$(MAKE) -f CMakeFiles/plane_extract.dir/build.make CMakeFiles/plane_extract.dir/build
 .PHONY : plane_extract/fast
+
+src/doVisualization.o: src/doVisualization.cpp.o
+
+.PHONY : src/doVisualization.o
+
+# target to build an object file
+src/doVisualization.cpp.o:
+	$(MAKE) -f CMakeFiles/plane_extract.dir/build.make CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o
+.PHONY : src/doVisualization.cpp.o
+
+src/doVisualization.i: src/doVisualization.cpp.i
+
+.PHONY : src/doVisualization.i
+
+# target to preprocess a source file
+src/doVisualization.cpp.i:
+	$(MAKE) -f CMakeFiles/plane_extract.dir/build.make CMakeFiles/plane_extract.dir/src/doVisualization.cpp.i
+.PHONY : src/doVisualization.cpp.i
+
+src/doVisualization.s: src/doVisualization.cpp.s
+
+.PHONY : src/doVisualization.s
+
+# target to generate assembly for a file
+src/doVisualization.cpp.s:
+	$(MAKE) -f CMakeFiles/plane_extract.dir/build.make CMakeFiles/plane_extract.dir/src/doVisualization.cpp.s
+.PHONY : src/doVisualization.cpp.s
 
 src/findFiles.o: src/findFiles.cpp.o
 
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... plane_extract"
+	@echo "... src/doVisualization.o"
+	@echo "... src/doVisualization.i"
+	@echo "... src/doVisualization.s"
 	@echo "... src/findFiles.o"
 	@echo "... src/findFiles.i"
 	@echo "... src/findFiles.s"

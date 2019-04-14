@@ -4,7 +4,6 @@
 #include<Eigen/Dense>
 
 #include <pcl/io/pcd_io.h>
-#include <pcl/io/ply_io.h>
 #include <pcl/point_cloud.h>
 #include <pcl/console/parse.h>    //用
 #include <pcl/common/transforms.h>
@@ -19,6 +18,7 @@
 
 #include"../include/showHelp.h"
 #include"../include/findFiles.h"
+#include"../include/doVisualization.h"
 
 using namespace std;
 
@@ -33,12 +33,12 @@ int main(int argc, char** argv)
 	}  
 
 	//give the path of the files
-	string filePath = "../data";
+	string filePath = "../data/";
 	vector<string> files;
 	//search PCD files, write filenames in vector<string> files
 	findFiles( filePath.c_str(),files);
 	
-	
+	doVisualization(filePath,files);
 	
 	
 

@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rick/文档/PCL/kitti_plane
+CMAKE_SOURCE_DIR = /home/rick/HiWi/GitCode/kitti_plane
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rick/文档/PCL/kitti_plane/build
+CMAKE_BINARY_DIR = /home/rick/HiWi/GitCode/kitti_plane/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/plane_extract.dir/depend.make
@@ -57,47 +57,61 @@ include CMakeFiles/plane_extract.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/plane_extract.dir/flags.make
 
+CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o: CMakeFiles/plane_extract.dir/flags.make
+CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o: ../src/doVisualization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o -c /home/rick/HiWi/GitCode/kitti_plane/src/doVisualization.cpp
+
+CMakeFiles/plane_extract.dir/src/doVisualization.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plane_extract.dir/src/doVisualization.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/HiWi/GitCode/kitti_plane/src/doVisualization.cpp > CMakeFiles/plane_extract.dir/src/doVisualization.cpp.i
+
+CMakeFiles/plane_extract.dir/src/doVisualization.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plane_extract.dir/src/doVisualization.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/HiWi/GitCode/kitti_plane/src/doVisualization.cpp -o CMakeFiles/plane_extract.dir/src/doVisualization.cpp.s
+
 CMakeFiles/plane_extract.dir/src/findFiles.cpp.o: CMakeFiles/plane_extract.dir/flags.make
 CMakeFiles/plane_extract.dir/src/findFiles.cpp.o: ../src/findFiles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/文档/PCL/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/plane_extract.dir/src/findFiles.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/findFiles.cpp.o -c /home/rick/文档/PCL/kitti_plane/src/findFiles.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/plane_extract.dir/src/findFiles.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/findFiles.cpp.o -c /home/rick/HiWi/GitCode/kitti_plane/src/findFiles.cpp
 
 CMakeFiles/plane_extract.dir/src/findFiles.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plane_extract.dir/src/findFiles.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/文档/PCL/kitti_plane/src/findFiles.cpp > CMakeFiles/plane_extract.dir/src/findFiles.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/HiWi/GitCode/kitti_plane/src/findFiles.cpp > CMakeFiles/plane_extract.dir/src/findFiles.cpp.i
 
 CMakeFiles/plane_extract.dir/src/findFiles.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plane_extract.dir/src/findFiles.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/文档/PCL/kitti_plane/src/findFiles.cpp -o CMakeFiles/plane_extract.dir/src/findFiles.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/HiWi/GitCode/kitti_plane/src/findFiles.cpp -o CMakeFiles/plane_extract.dir/src/findFiles.cpp.s
 
 CMakeFiles/plane_extract.dir/src/main.cpp.o: CMakeFiles/plane_extract.dir/flags.make
 CMakeFiles/plane_extract.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/文档/PCL/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/plane_extract.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/main.cpp.o -c /home/rick/文档/PCL/kitti_plane/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/plane_extract.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/main.cpp.o -c /home/rick/HiWi/GitCode/kitti_plane/src/main.cpp
 
 CMakeFiles/plane_extract.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plane_extract.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/文档/PCL/kitti_plane/src/main.cpp > CMakeFiles/plane_extract.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/HiWi/GitCode/kitti_plane/src/main.cpp > CMakeFiles/plane_extract.dir/src/main.cpp.i
 
 CMakeFiles/plane_extract.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plane_extract.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/文档/PCL/kitti_plane/src/main.cpp -o CMakeFiles/plane_extract.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/HiWi/GitCode/kitti_plane/src/main.cpp -o CMakeFiles/plane_extract.dir/src/main.cpp.s
 
 CMakeFiles/plane_extract.dir/src/showHelp.cpp.o: CMakeFiles/plane_extract.dir/flags.make
 CMakeFiles/plane_extract.dir/src/showHelp.cpp.o: ../src/showHelp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/文档/PCL/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/plane_extract.dir/src/showHelp.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/showHelp.cpp.o -c /home/rick/文档/PCL/kitti_plane/src/showHelp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/plane_extract.dir/src/showHelp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plane_extract.dir/src/showHelp.cpp.o -c /home/rick/HiWi/GitCode/kitti_plane/src/showHelp.cpp
 
 CMakeFiles/plane_extract.dir/src/showHelp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plane_extract.dir/src/showHelp.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/文档/PCL/kitti_plane/src/showHelp.cpp > CMakeFiles/plane_extract.dir/src/showHelp.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rick/HiWi/GitCode/kitti_plane/src/showHelp.cpp > CMakeFiles/plane_extract.dir/src/showHelp.cpp.i
 
 CMakeFiles/plane_extract.dir/src/showHelp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plane_extract.dir/src/showHelp.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/文档/PCL/kitti_plane/src/showHelp.cpp -o CMakeFiles/plane_extract.dir/src/showHelp.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rick/HiWi/GitCode/kitti_plane/src/showHelp.cpp -o CMakeFiles/plane_extract.dir/src/showHelp.cpp.s
 
 # Object files for target plane_extract
 plane_extract_OBJECTS = \
+"CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o" \
 "CMakeFiles/plane_extract.dir/src/findFiles.cpp.o" \
 "CMakeFiles/plane_extract.dir/src/main.cpp.o" \
 "CMakeFiles/plane_extract.dir/src/showHelp.cpp.o"
@@ -105,6 +119,7 @@ plane_extract_OBJECTS = \
 # External object files for target plane_extract
 plane_extract_EXTERNAL_OBJECTS =
 
+plane_extract: CMakeFiles/plane_extract.dir/src/doVisualization.cpp.o
 plane_extract: CMakeFiles/plane_extract.dir/src/findFiles.cpp.o
 plane_extract: CMakeFiles/plane_extract.dir/src/main.cpp.o
 plane_extract: CMakeFiles/plane_extract.dir/src/showHelp.cpp.o
@@ -282,18 +297,17 @@ plane_extract: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkxdmf2-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libxml2.so
-plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/serial/lib/libhdf5.so
-plane_extract: /usr/lib/x86_64-linux-gnu/libpthread.so
+plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/lib/libhdf5.so
+plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/lib/libhdf5_hl.so
+plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/lib/libhdf5.so
+plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/openmpi/lib/libhdf5_hl.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libsz.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libdl.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libm.so
-plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/serial/lib/libhdf5_hl.so
-plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/serial/lib/libhdf5.so
-plane_extract: /usr/lib/x86_64-linux-gnu/libpthread.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libsz.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libdl.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libm.so
-plane_extract: /usr/lib/x86_64-linux-gnu/hdf5/serial/lib/libhdf5_hl.so
+plane_extract: /usr/lib/openmpi/lib/libmpi.so
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkIOLSDyna-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkViewsQt-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkFiltersAMR-6.2.so.6.2.0
@@ -308,7 +322,7 @@ plane_extract: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.5.1
 plane_extract: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.5.1
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkverdict-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkGeovisCore-6.2.so.6.2.0
-plane_extract: /usr/lib/x86_64-linux-gnu/libproj.so
+plane_extract: /usr/lib/x86_64-linux-gnu/libvtkproj4-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkViewsInfovis-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkInfovisLayout-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkViewsCore-6.2.so.6.2.0
@@ -381,7 +395,7 @@ plane_extract: /usr/lib/x86_64-linux-gnu/libvtkDICOMParser-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libvtkmetaio-6.2.so.6.2.0
 plane_extract: /usr/lib/x86_64-linux-gnu/libz.so
 plane_extract: CMakeFiles/plane_extract.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rick/文档/PCL/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable plane_extract"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable plane_extract"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plane_extract.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -394,6 +408,6 @@ CMakeFiles/plane_extract.dir/clean:
 .PHONY : CMakeFiles/plane_extract.dir/clean
 
 CMakeFiles/plane_extract.dir/depend:
-	cd /home/rick/文档/PCL/kitti_plane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rick/文档/PCL/kitti_plane /home/rick/文档/PCL/kitti_plane /home/rick/文档/PCL/kitti_plane/build /home/rick/文档/PCL/kitti_plane/build /home/rick/文档/PCL/kitti_plane/build/CMakeFiles/plane_extract.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rick/HiWi/GitCode/kitti_plane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rick/HiWi/GitCode/kitti_plane /home/rick/HiWi/GitCode/kitti_plane /home/rick/HiWi/GitCode/kitti_plane/build /home/rick/HiWi/GitCode/kitti_plane/build /home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles/plane_extract.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/plane_extract.dir/depend
 
