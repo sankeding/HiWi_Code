@@ -15,5 +15,4 @@ using namespace pcl;
 
 void doVisualization(const string &, const vector<string> &);
 
-
 #endif

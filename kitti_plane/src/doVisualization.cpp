@@ -14,13 +14,17 @@ void doVisualization(const string & filePath, const vector<string> & files){
 		if(i != 0){		
 			source_cloud->clear();
 			viewer.removePointCloud("source_cloud");
-		}			
+		}	
+
+		//doUntwisting();		
 		pcl::io::loadPCDFile (filePath + files[i], *source_cloud);
+		
+		//doTransform(source_cloud);		
 		viewer.addPointCloud (source_cloud, source_cloud_color_handler,"source_cloud");
 		int loopIndex=1;		
 		while(loopIndex){
 			viewer.spinOnce();
-			//usleep(2000000); //micosecand
+			//usleep(2000000); //micosecond
 			loopIndex=0;
 		}
 	}

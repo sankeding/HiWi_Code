@@ -1,3 +1,0 @@
-/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles/rebuild_cache.dir
-/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles/edit_cache.dir
-/home/rick/HiWi/GitCode/kitti_plane/build/CMakeFiles/plane_extract.dir
