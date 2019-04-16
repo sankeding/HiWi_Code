@@ -13,14 +13,18 @@
 
 //#include <vector>
 #include <cmath>
+#include <Eigen/Dense>
 //#include <string>	//用
 //#include <dirent.h>  //用(struct dirent)
 
-#include"../include/showHelp.h"
-#include"../include/findFiles.h"
-#include"../include/doVisualization.h"
+#include "../include/showHelp.h"
+#include "../include/findFiles.h"
+#include "../include/doVisualization.h"
+#include "../include/loadOxtsData.h"
+#include "../include/convertOxtsToPose.h"
 
 using namespace std;
+using namespace Eigen;
 
 
 //main function
@@ -33,14 +37,26 @@ int main(int argc, char** argv)
 	}  
 
 	//give the path of the files
-	string filePath = "../data/";
-	vector<string> files;
+	string KittiDataPath = "../kitti_data/2011_09_26_drive_0005_sync/";
+	string PCDfilePath = KittiDataPath + "velodyne_points/data_pcd/";
+ 	string OxtsPath = KittiDataPath + "oxts/data/";
+	
+
+	vector<string> PCDfiles;
+
+
 	//search PCD files, write filenames in vector<string> files
-	findFiles( filePath.c_str(),files);
+	findFiles( PCDfilePath.c_str(),PCDfiles);
+	//doVisualization(PCDfilePath,PCDfiles);
+ 	
+
+	//OXTS
+	vector<vector<double> > oxts;
+	loadOxtsData(OxtsPath,oxts);
 	
-	doVisualization(filePath,files);
-	
-	
+  	int frameId =100;             //frameId start from 0
+	Matrix4f Pose = Matrix4f::Zero();
+	Pose = convertOxtsToPose(oxts,frameId);
 
 	
   return 0;
