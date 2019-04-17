@@ -19,9 +19,8 @@
 
 #include "../include/showHelp.h"
 #include "../include/findFiles.h"
-#include "../include/doVisualization.h"
 #include "../include/loadOxtsData.h"
-#include "../include/convertOxtsToPose.h"
+#include "../include/doVisualization.h"
 
 using namespace std;
 using namespace Eigen;
@@ -43,20 +42,17 @@ int main(int argc, char** argv)
 	
 
 	vector<string> PCDfiles;
-
-
+	vector<vector<double> > oxts;
 	//search PCD files, write filenames in vector<string> files
 	findFiles( PCDfilePath.c_str(),PCDfiles);
-	//doVisualization(PCDfilePath,PCDfiles);
- 	
-
 	//OXTS
-	vector<vector<double> > oxts;
 	loadOxtsData(OxtsPath,oxts);
-	
-  	int frameId =100;             //frameId start from 0
-	Matrix4f Pose = Matrix4f::Zero();
-	Pose = convertOxtsToPose(oxts,frameId);
+
+
+
+	doVisualization(PCDfilePath, PCDfiles, oxts);
+
+  	
 
 	
   return 0;

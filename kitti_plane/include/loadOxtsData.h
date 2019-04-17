@@ -7,16 +7,19 @@
 #include <string>
 #include <vector>
 
-#include "./findFiles.h"
+#include "../include/findFiles.h"
 
 using namespace std;
 
-void loadOxtsData (const string & OxtsPath, vector<vector<double> > & oxts){
+void loadOxtsData ( string & OxtsPath, vector<vector<double> > & oxts){
 	
 	if(oxts.size() > 0){ cout << " Data already loaded "<<endl; return; }
 
 	vector<string> files;
-	findFiles(OxtsPath.c_str(), files);
+	const char* OxtsPa = OxtsPath.c_str();
+	cout<< OxtsPa<<endl;
+	findFiles(OxtsPa, files);
+	cout<<files[0]<<endl;	
 	
 	for(size_t i=0;i<files.size();i++){
 		string InputFile = OxtsPath+files[i];			

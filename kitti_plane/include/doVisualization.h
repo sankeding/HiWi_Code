@@ -9,10 +9,13 @@
 #include <pcl/point_cloud.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
+#include "../include/getPoseCloud.h"
+
+
 using namespace std;
 using namespace pcl;
 
 
-void doVisualization(const string &, const vector<string> &);
+void doVisualization(const string &, const vector<string> &,const vector<vector<double> > &);
 
 #endif

@@ -1,7 +1,6 @@
-#include"../include/findFiles.h"
+#include "../include/findFiles.h"
 
-
-void findFiles(const char* PATH,vector<string> & files){	
+void findFiles( const char * PATH,vector<string> & files){	
 	struct dirent * filePtr;
 	DIR * dir;
 	dir = opendir(PATH);
@@ -15,3 +14,4 @@ void findFiles(const char* PATH,vector<string> & files){
 	closedir(dir);
 	sort(files.begin(), files.end());
 }
+

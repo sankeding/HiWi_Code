@@ -9,7 +9,6 @@
 
 using namespace std;
 
-void findFiles(const char* ,vector<string> &);
-
+void findFiles( const char *, vector<string> &);
 
 #endif
