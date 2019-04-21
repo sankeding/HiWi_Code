@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
+#include <stdlib.h>
 
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_cloud.h>

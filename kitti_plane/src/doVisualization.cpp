@@ -19,9 +19,11 @@ void doVisualization( const string & filePath, const vector<string> & files,cons
 
 		//doUntwisting();		
 		pcl::io::loadPCDFile (filePath + files[i], *source_cloud);
-	
+	 	 
+		string subfilename = files[i].substr(0,10);
+		int frameId = atoi(subfilename.c_str());
 		//transform
-		getPoseCloud(source_cloud, pose_cloud, oxts, i);		
+		getPoseCloud(source_cloud, pose_cloud, oxts, frameId);		
 			
 		viewer.addPointCloud (pose_cloud, pose_cloud_color_handler,"pose_cloud");
 		int loopIndex=1;		

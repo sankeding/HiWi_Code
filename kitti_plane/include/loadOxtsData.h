@@ -13,13 +13,15 @@ using namespace std;
 
 void loadOxtsData ( string & OxtsPath, vector<vector<double> > & oxts){
 	
-	if(oxts.size() > 0){ cout << " Data already loaded "<<endl; return; }
+	if(oxts.size() > 0){ 
+		cout << " Data already loaded "<<endl; return; 
+	}else{
+		cout << "Start loading oxts from dir: "<< OxtsPath <<endl;		
+	}
 
 	vector<string> files;
 	const char* OxtsPa = OxtsPath.c_str();
-	cout<< OxtsPa<<endl;
-	findFiles(OxtsPa, files);
-	cout<<files[0]<<endl;	
+	findFiles(OxtsPa, files);	
 	
 	for(size_t i=0;i<files.size();i++){
 		string InputFile = OxtsPath+files[i];			
@@ -29,7 +31,7 @@ void loadOxtsData ( string & OxtsPath, vector<vector<double> > & oxts){
 		vector<double> oxtsRow;
 		int count =0;
 		while(count<6){                          //when read all data: while(!input.eof())
-			char *dataChar;
+			char dataChar[100];
 			input >> dataChar;
 			double data = atof(dataChar);
 			oxtsRow.push_back(data);

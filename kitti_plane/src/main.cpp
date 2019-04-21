@@ -48,12 +48,7 @@ int main(int argc, char** argv)
 	//OXTS
 	loadOxtsData(OxtsPath,oxts);
 
-
-
 	doVisualization(PCDfilePath, PCDfiles, oxts);
-
-  	
-
 	
   return 0;
 }
