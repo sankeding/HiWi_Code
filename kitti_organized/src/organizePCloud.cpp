@@ -4,7 +4,7 @@ void organizePCloud(pcl::PointCloud<pcl::PointXYZI>::Ptr & cloud,const vector<ve
 	pcl::PointCloud<pcl::PointXYZI>::Ptr part_cloud (new pcl::PointCloud<pcl::PointXYZI> ());
 	pcl::PointCloud<pcl::PointXYZI>::Ptr org_cloud (new pcl::PointCloud<pcl::PointXYZI> ());
 	
-	string Path = "./data/";		
+	string Path = "./data_orgnize/";		
 	makeDir(Path.c_str());
 
 	for(size_t i=0;i<cloud->size();i++){
@@ -14,8 +14,8 @@ void organizePCloud(pcl::PointCloud<pcl::PointXYZI>::Ptr & cloud,const vector<ve
 	} 
 	
 	for(int i=0;i<laserRange;i++){
-		double uplimitRad = (laserUppest + 0.15 - i * laserInterval) * M_PI / 180.0;
-		double downlimitRad = (laserUppest - 0.15 - i * laserInterval) * M_PI / 180.0;
+		double uplimitRad = (laserUppest + 0.16 - i * laserInterval) * M_PI / 180.0;
+		double downlimitRad = (laserUppest - 0.16 - i * laserInterval) * M_PI / 180.0;
 		
 		org_cloud->clear();		
 		for(size_t k=0;k < part_cloud->size();k++){	
@@ -24,8 +24,9 @@ void organizePCloud(pcl::PointCloud<pcl::PointXYZI>::Ptr & cloud,const vector<ve
 			double z = part_cloud->points[k].z;
 			double rad = atan( z / sqrt(pow(x,2) + pow(y,2)) );
 			//rad = atan (cloud->points[i].z / cloud->point[i].x);
+			
 			if(rad > downlimitRad && rad < uplimitRad){
-				org_cloud->push_back(part_cloud->points[k]);
+				org_cloud->push_back(part_cloud->points[k]);	
 			}
 		}
 		//doFiltering();	
@@ -36,15 +37,10 @@ void organizePCloud(pcl::PointCloud<pcl::PointXYZI>::Ptr & cloud,const vector<ve
 			pcl::PCDWriter writer;
 			char cc[2];
 			sprintf(cc,"%02d",i); 
-  			ss << Path <<"org_cloud" << cc <<".pcd";
-			writer.write<pcl::PointXYZI> (ss.str(), *org_cloud, false);
-		}	
-
+  			ss << Path << cc <<".pcd";
+			writer.write<pcl::PointXYZI> (ss.str(), *org_cloud, false);	
+		}		
 	}
 
-
-	
-	
-
-
+	cout<< "organize Points Cloud done" <<endl;	
 }
